@@ -1,0 +1,23 @@
+Ögrencilerin Okulun kantininden bazi almis oldugu esyalari veri tabaninda kayit eden bir sistem ekleyin
+
+main.py'de 5 tane document ekleyin  fieldlar asagidaki gibi olsun örnek:
+[
+        {"_id": 1, "item": "kalem", "price": 10, "quantity": 2, "date": dt.datetime.utcnow()},
+        {"_id": 2, "item": "silgi", "price": 20, "quantity": 1, "date": dt.datetime.utcnow()},
+        {"_id": 3, "item": "kalem", "price": 5, "quantity": 5, "date": dt.datetime.utcnow()},
+        {"_id": 4, "item": "sulu boya", "price": 10, "quantity": 10, "date": dt.datetime.utcnow()},
+        {"_id": 5, "item": "kalem", "price": 5, "quantity": 10, "date": dt.datetime.utcnow()}
+    ]
+gibi veriler icerisine ekleyin.
+
+ikinci olarak ögrenciler_veri_tabani klasörünün icerisine stores_db.py isimli bir python dosyasi olusturun.
+
+icerisine StoresDB isimli bir sinif olusturun ve MongoDBConnect'den miras alsin
+__init__ methoduna collection ismi 'kantin' olsun
+Asagidaki methodlara sahip olsun:
+
+    bütün datalari veri tabanina atan bir method ekleyin 
+
+    Ögrencilerin almis oldugu ürünleri _id'ye atin ve ürün bazli gruplama yaparak karsisinda 
+    miktar ve fiyati '$multiply' methoduyla carparak '$avg' ile ortalamasini alacaksiniz. ve bunu 'ortalama_satis_miktari' olarak bir field olusturup atiniz.
+
